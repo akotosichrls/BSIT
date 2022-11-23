@@ -18,3 +18,24 @@ int main(){
     //pagkatapos ng \n, ilalagay mo yung number na mapupunta sa %d
     return 0;
 }
+
+
+==============================================================================================
+
+#include <stdio.h>
+
+int main(){
+    printf("3+2 is equals to %d and 3-2 is equals to %d and 3*2 is equals to %d.\n",3+2,3-2,3*2);
+    return 0;
+}
+
+
+==============================================================================================
+
+#include <stdio.h>
+
+int main(){
+    printf("3+2 is equals to %d and 3-2 is equals to %d and 3*2 is equals to %d.\n",3+2,3-2,3*2);
+    printf("3+2*3 is equals to %d and (3+2)*3 is equals to %d\n",3+2*3,(3+2)*3);
+    return 0;
+}
