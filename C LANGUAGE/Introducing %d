@@ -6,36 +6,3 @@ int main(){
     printf("If I have %d bills worth %d pesos each then I have %d pesos.\n",5,100,500);
     return 0;
 }
-
-
-==============================================================================================
-
-#include <stdio.h>
-
-int main(){
-    printf("If I have %d bills worth %d pesos each then I have %d pesos.\n",5,100,500);
-    //%d is yung parang number, example imbes na number 5 ilagay mo, ang ilalagay mo is %d
-    //pagkatapos ng \n, ilalagay mo yung number na mapupunta sa %d
-    return 0;
-}
-
-
-==============================================================================================
-
-#include <stdio.h>
-
-int main(){
-    printf("3+2 is equals to %d and 3-2 is equals to %d and 3*2 is equals to %d.\n",3+2,3-2,3*2);
-    return 0;
-}
-
-
-==============================================================================================
-
-#include <stdio.h>
-
-int main(){
-    printf("3+2 is equals to %d and 3-2 is equals to %d and 3*2 is equals to %d.\n",3+2,3-2,3*2);
-    printf("3+2*3 is equals to %d and (3+2)*3 is equals to %d\n",3+2*3,(3+2)*3);
-    return 0;
-}
