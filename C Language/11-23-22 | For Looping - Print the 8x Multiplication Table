@@ -1,4 +1,4 @@
-//Print the 8x Multiplication Table
+//For Looping - Print the 8x Multiplication Table
 //Your friend is having a lot of difficulties with multiplication tables. He's having the most trouble with the multiples of 8 table,
 //and asks you to send him the multiples of 8 table so that he can learn it more easily. To do this, you decide to write a program that prints the multiples of 8 table.
 //Because you will use your code again in the future to print other multiplication tables, you decide to use a loop and only one print statement.
