@@ -1,0 +1,13 @@
+//Introducing %d
+//%d is a format specifier, used in C Language. 
+//Now a format specifier is indicated by a % (percentage symbol) before the letter describing it. 
+//In simple words, a format specifier tells us the type of data to store and print. Now, %d represents the signed decimal integer.
+
+
+
+#include <stdio.h>
+
+int main(){
+    printf("If I have %d bills worth %d pesos each then I have %d pesos.\n",5,100,500);
+    return 0;
+}

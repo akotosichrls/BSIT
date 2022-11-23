@@ -1,8 +1,0 @@
-//Introducing %d
-
-#include <stdio.h>
-
-int main(){
-    printf("If I have %d bills worth %d pesos each then I have %d pesos.\n",5,100,500);
-    return 0;
-}
