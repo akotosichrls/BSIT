@@ -1,5 +1,7 @@
 //Using Equations in %d (2)
 
+
+
 #include <stdio.h>
 
 int main(){
