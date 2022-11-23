@@ -1,0 +1,15 @@
+//Introducing scanf
+//The scanf() function reads data from the standard input stream stdin into the locations given by each entry in argument-list.
+//Each argument must be a pointer to a variable with a type that corresponds to a type specifier in format-string.
+
+
+
+#include <stdio.h>
+
+int main(){
+    int age;
+    printf("What is your age?\n");
+    scanf("%d",&age);
+    printf("You are %d years old.\n",age);
+    return 0;
+}
