@@ -1,0 +1,12 @@
+//I am %d years old. (2)
+
+
+
+#include <stdio.h>
+
+int main(){
+    int age = 23;
+    printf("I am %d years old.\n",age);
+    printf("After two years, I will be %d years old.\n",age+2);
+    return 0;
+}
