@@ -1,0 +1,8 @@
+//Using Equations in %d
+
+#include <stdio.h>
+
+int main(){
+    printf("3+2 is equals to %d and 3-2 is equals to %d and 3*2 is equals to %d.\n",3+2,3-2,3*2);
+    return 0;
+}
