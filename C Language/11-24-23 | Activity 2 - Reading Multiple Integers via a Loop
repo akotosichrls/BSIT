@@ -1,1 +1,38 @@
-bukas iedit ko hehe
+//Activity 2 - Reading Multiple Integers via a Loop
+
+
+
+#include <stdio.h> //header
+
+int main (){ //assigning integers and declaring values
+    int i = 0;
+    int howManyRobots = 0;
+    int weight = 0;
+    int height = 0;
+    int strength = 0;
+    int skills = 0;
+    int numberRead = 0;
+    int sum = 0;
+
+    printf("We need to beat Stryker!\nInput how many Robots do you want: "); //input
+    scanf("%d", &howManyRobots);
+
+    for(int i=0; i < howManyRobots; i++){ //actions for looping
+        printf("\nInput Weight: ");
+        scanf("%d",&weight);
+        printf("Input Height: ");
+        scanf("%d",&height);
+        printf("Input Strength: ");
+        scanf("%d",&strength);
+        printf("Input Skill: ");
+        scanf("%d",&skills);
+
+        numberRead = ((weight-height)*(strength+skills)); //output
+        sum = sum + numberRead;
+    }
+    printf("\nOverall Power: %d", sum); //output of the total outcome
+    return 0; //end
+}
+
+//based on the module if i put (weight-height) the output will be -163 in your example
+//if i switch this to (height-weight) the output will be 163 in your example.
