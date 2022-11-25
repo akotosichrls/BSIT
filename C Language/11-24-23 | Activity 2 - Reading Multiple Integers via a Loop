@@ -1,1 +1,34 @@
-wait
+//Activity 2 - Reading Multiple Integers via a Loop
+
+
+
+#include <stdio.h> //header 
+
+int main(){ //declaring variables and values.
+    int i = 0;
+    int howMany = 0; //refers to how many robots does the user want to put.
+    int weight = 0;
+    int height = 0;
+    int strength = 0;
+    int skills = 0;
+    int numberRead = 0; //refers to the power of each robot from the calculation.
+    int final = 0; //refers to the power of all robot from the calculation.
+
+    //input
+    printf("How many Robots do you want? \n"); //\n is used so when inputting the number, to look clean in command prompt tho this is only a personal preference.
+    scanf("%d", &howMany);
+
+    //for looping begin
+    for(int i=0; i < howMany; i++){ //int i = 0 is for initialization, i < howMany is for the amount of times the program will work, and i++ is for incrementing the value of i.
+        printf("Input 4 numbers (Height/Weight/Strength/Skills):\n");
+        scanf("%d %d %d %d", &height, &weight, &strength, &skills); //in the given instruction, weight should be the first then height, strength, and skill.
+        //but the output would give a -163 from the given example because it reads it as weight (50) - height (60) = -10 and weight (43) - height (62) = -19.
+        //this is why I put &height first so when inputting the numbers, number 50 will become the height and 60 will become the weight.
+        //formula will still be the same so it goes like this weight (60) - height (50) = 10 and weight (62) - height (43) = 19.
+        //the final output for this will be 163 after calculating all.
+        numberRead = (strength+skills)*(weight-height); //the calculation given in the instruction.
+        final = final + numberRead; //for looping end
+    }
+    printf("The Robot's overall power is %d.", final); //after the looping, it will display the total power of all the robots.
+    return 0; //end
+}
