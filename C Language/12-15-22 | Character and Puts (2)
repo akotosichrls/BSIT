@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+int main(){
+    char employeeName[] = 'A';
+    printf("%c\n",employeeName);
+    return 0;
+}
