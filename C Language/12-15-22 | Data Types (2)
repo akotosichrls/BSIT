@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(){
+    char employeeName[] = "Juan Dela Cruz";
+    char ID[] = "2022-09123-MN-0";
+    int age = 29;
+    float salary = 54765.98;
+    char phoneNumber[] = "8123-4567";
+
+    printf("Employee Name: ");
+    puts(employeeName);
+
+    printf("Employee ID: ");
+    puts(ID);
+
+    printf("Age: %d\n", age);
+
+    printf("Salary: %.2f\n", salary);
+
+    printf("Phone Number: ");
+    puts(phoneNumber);
+
+    return 0;
+}
