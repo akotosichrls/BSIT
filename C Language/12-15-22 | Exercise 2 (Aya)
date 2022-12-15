@@ -1,0 +1,16 @@
+int main()
+{
+    float c, f;
+
+    printf("Enter the temperature in Celsius: ") ;
+    scanf("%f" , &c) ;
+
+    /** formula */
+    f = c * 9.0 / 5.0 + 32.0 ;
+
+    printf("%f Celsius = %0.1f Fahrenheit" , c, f) ;
+
+    return 0 ;
+
+}
+
