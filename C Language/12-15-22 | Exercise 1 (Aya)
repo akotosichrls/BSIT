@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    float km, miles ;
+
+    printf("Enter the distance traveled in kilometers: ") ;
+    scanf("%f" , &km) ;
+
+    /** formula */
+    miles = km * 0.621371 ;
+
+    printf("%f kilometers traveled = %0.6f miles" , km, miles) ;
+
+    return 0 ;
+
+}
