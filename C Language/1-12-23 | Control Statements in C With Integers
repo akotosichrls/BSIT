@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void){
+    //if it is true, then do this
+    //if it is not true, then do not do this
+    //False --> 0
+    //True --> 1, 2, 10, 20, -1, -10...
+    int weatherIsGood = 1;
+
+    if(weatherIsGood){
+       printf("The weather is good.\n");
+       printf("I can go outside!");
+    }else{
+        printf("The weather is bad!\n");
+        printf("I have to stay home.\n");
+    }
+
+    return 0;
+}
