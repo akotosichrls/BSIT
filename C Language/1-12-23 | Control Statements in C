@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void){
+    //if it is true, then do this
+    //if it is not true, then do not do this
+    //False --> 0
+    //True --> 1, 2, 10, 20, -1, -10...
+
+    if(1){
+        printf("Condition is true, I am executing this line.\n");
+    }
+
+    return 0;
+}
