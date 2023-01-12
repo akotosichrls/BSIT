@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void){
+    int Passenger = 0;
+    float gas;
+
+    printf("No. of Passenger and Gas Fee:\n");
+    scanf("%d %f", &Passenger, &gas);
+
+    if(Passenger == 0){
+        printf("%.2f\n", gas);
+    }else{
+        printf("%.2f\n"), (gas + 150) / (Passenger + 1);
+    }
+
+    return 0;
+}
