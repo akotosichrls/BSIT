@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void){
+    int Passenger;
+    float gas;
+    float costWithPassenger;
+    float totalCost;
+
+    printf("No. of Passenger and Gas Fee:\n");
+    scanf("%d %f", &Passenger, &gas);
+
+    totalCost = 150 + gas;
+
+    if(Passenger > 0){
+        costWithPassenger = (totalCost/(1+Passenger));
+        printf("Total Fee: %.2f\n", costWithPassenger);
+    }
+    else
+    {
+        printf("Total Fee: %.2f\n", gas);
+    }
+
+    return 0;
+}
