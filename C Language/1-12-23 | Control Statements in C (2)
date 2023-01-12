@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void){
+    int sunny = 0;
+    int vacation = 1;
+    int sunnyAndVacation = sunny && vacation; //&& and || or
+
+    if(sunnyAndVacation){
+        printf("I will go to vacation.\n");
+    }
+    else
+    {
+        printf("Too bad!\n");
+    }
+
+    return 0;
+}
+
+//1 and 1 = 1
+//1 and 0 = 0
+//0 and 1 = 0
+//0 and 0 = 0
