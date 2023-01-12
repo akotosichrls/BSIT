@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void){
+    //arithmethic operators + - * / %
+    //comparison operators < > <= >= != ==
+
+    int a = 5;
+    int b = 2;
+    int result;
+
+    printf("Check: Is a!=b?\n");
+    result = (a!=b);
+    if(result){
+        printf("True\n");
+    }else{
+        printf("False\n");
+    }
+
+    return 0;
+}
