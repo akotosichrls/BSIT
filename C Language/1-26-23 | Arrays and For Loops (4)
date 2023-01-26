@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main(void){
+   
+    int ages[10];
+    int ageMax = 0;
+    int i;
+
+    for(i=0; i<10; i++){
+        scanf("%d", &ages[i]);
+        if(ages[i] > ageMax){
+            ageMax = ages[i];
+        }
+    }
+    printf("The maximum age is %d.\n", ageMax);
+    printf("Age differences with the eldest person:\n");
+
+    for(i=0; i<10; i++){
+        printf("%d:%d\n", ages[i], ageMax - ages[i]);
+    }
+
+    return 0;
+}
