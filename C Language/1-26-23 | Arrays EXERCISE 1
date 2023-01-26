@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main (void){
+
+  int ingredients[10];
+  int newQuantity = 0;
+  int ingredientId;
+  int i;
+
+  for(i=0; i<10; i++){
+      printf ("Enter the quantity needed for the ingredient %d: ", i+1);
+      scanf ("%d", &newQuantity);
+      ingredients[i] = newQuantity;
+
+  }
+
+  printf ("Enter the ID of the ingredient: ");
+  scanf ("%d", &ingredientId);
+
+  printf ("The quantity of ingredient %d is: %d grams\n", ingredientId, ingredients[ingredientId]);
+
+  return 0;
+
+}
+
+
+//https://stackoverflow.com/questions/52730828/stuck-on-how-to-get-the-indexs-value-from-an-array-of-a-user-defined-value
