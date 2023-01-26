@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main(void){
+    
+    int array[3];
+    int readValue = 0;
+    int indexNumber = 0;
+    int i;
+
+    for(i=0; i<3; i++){
+        printf("Enter a value: ");
+        scanf("%d", &readValue);
+        array[indexNumber] = readValue;
+        printf("Index Number %d contains %d.\n", indexNumber, array[indexNumber]);
+        indexNumber = indexNumber + 1; //or indexNumber++
+
+    }
+
+    return 0;
+}
