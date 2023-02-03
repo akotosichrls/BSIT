@@ -1,0 +1,34 @@
+//BSIT 1-3
+//Activity 4 - Arrays and For Loops
+//Ingredient Cost Computation
+
+#include <stdio.h>
+
+int main(void){
+  int numberOfIngredients;
+  int i;
+  double pricePerPound = 0;
+  double cost[10];
+  double poundsForIngredients[10];
+
+  printf("Enter the number of ingredients: "); //We need to know first how many ingredients do we need by inputting the number.
+  scanf("%d", &numberOfIngredients);
+
+  for(i=0; i<numberOfIngredients; i++){ //1st code to be executed after inputting the number of ingredients.
+    printf("Enter the price per pound for ingredient %d: ", i+1); //We put i+1 because i=0 and when it prints it will print as ingredient 1 then ingredient 2 and so on.
+    scanf("%lf", &cost[i]); //Our format specifier is %lf because there is a decimal we need to input to get the price per round, applies on the second for loop below as well.
+    
+  }
+
+  for(i=0; i<numberOfIngredients; i++){ //2nd code to be executed after inputting the price per pound of the ingredient.
+    printf("Enter the weight needed for ingredient %d: ", i+1);
+    scanf("%lf", &poundsForIngredients[i]);
+
+    pricePerPound += cost[i] * poundsForIngredients[i]; //This will be the formula to get the output.
+}
+
+printf("Total cost: %.6lf", pricePerPound); //This prints the total cost, the output should have 6 decimal places that's why we put %.6lf.
+
+return 0;
+
+}
