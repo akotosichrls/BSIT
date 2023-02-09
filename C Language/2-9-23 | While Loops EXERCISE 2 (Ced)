@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int secretNumber = 0;
+    int guess = 0;
+    int tries = 0;
+    
+    printf("Enter a secret number: ");
+    scanf("%d", &secretNumber);
+    
+    printf("Welcome to the more or less game!\n");
+    
+    while (1) {
+        printf("Enter your guess: ");
+        scanf("%d", &guess);
+        tries++;
+        
+        if (guess == secretNumber) {
+            printf("Correct! You found the secret number in %d tries.\n", tries);
+            break;
+        } else if (guess < secretNumber) {
+            printf("It is more.\n");
+        } else {
+            printf("It is less.\n");
+        }
+    }
+    
+    return 0;
+}
