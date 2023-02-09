@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    int expense = 0;
+    int sum = 0;
+    
+    while (1) {
+        printf("Enter an expense: ");
+        scanf("%d", &expense);
+        
+        if (expense == -1) {
+            break;
+        }
+        
+        sum += expense;
+    }
+    
+    printf("The sum of all expenses is: %d\n", sum);
+    
+    return 0;
+}
