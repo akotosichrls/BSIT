@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int secretNumber;
+
+    printf("Secret Number: ");
+    scanf("%d", &secretNumber);
+
+    int guessNumber;
+    int tries = 0;
+
+    while (guessNumber != secretNumber){
+        printf("Guess Number: ");
+        scanf("%d", &guessNumber);
+        
+        if(guessNumber < secretNumber){
+            printf("It is more!\n");
+        }
+        else if(guessNumber > secretNumber){
+            printf("It is less!\n");
+        }
+        tries = tries + 1;
+    }
+
+    printf("Number of tries needed: %d", tries);
+    
+    return 0;
+}
