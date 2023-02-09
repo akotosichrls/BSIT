@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void){
+  int diceValue = 0;
+
+  while(diceValue != 6){
+    printf("Dice: ");
+    scanf("%d", &diceValue);
+  }
+
+  printf("Stopped!\n");
+  return 0;
+
+}
