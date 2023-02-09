@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    char word[50];
+    int i = 0;
+
+    printf("Enter a word: ");
+    scanf("%s", word);
+
+    while(word[i] != '\0')
+        i++;
+
+    printf("%s has word length %d.\n", word, i);
+    
+    return 0;
+}
