@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    char word[50];
+
+    printf("Please enter a word with 50 letters: ");
+    scanf("%s", word);
+
+    printf("The first four characters read is %c %c %c %c.\n", word[0], word[1], word[2], word[3]);
+    
+    return 0;
+}
