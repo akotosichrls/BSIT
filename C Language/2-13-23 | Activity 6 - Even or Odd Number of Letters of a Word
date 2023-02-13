@@ -1,16 +1,18 @@
 #include <stdio.h>
 
 int main(){
-    char name[50];
-    int i = 0;
+    char name[50]; // when we input, it is only 50 characters long
+    int i;
 
-    printf("Enter the name: \n");
-    scanf("%s", name);
+    printf("Enter the name: \n"); 
+    scanf("%s", name); // '%s' is used when we input letters and we can also include or not include '&' for the address of variable
     
-    while(name[i] != '\0'){
+    // while character is not ending the count it will continue to increment
+    while(name[i] != '\0'){ // '\0' is the mark of the end of string
     i++;
     }
 
+    // if count is divisible by 2 and doesn't have a remainder then it will print 1, however if it has a remainder it will print 2
     if(i%2 == 0){
         printf("1");
     }
