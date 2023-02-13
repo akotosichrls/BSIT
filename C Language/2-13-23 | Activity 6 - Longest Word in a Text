@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(){
+    int numberOfWords;
+    int longestWord = 0;
+    int current = 0;
+    int i;
+    int j;
+    char words[100]; // longest word will not exceed 100 characters
+    
+    // print and scan for users to input the words
+    printf("Enter the number of words: ");
+    scanf("%d", &numberOfWords);
+
+    printf("Enter the text: "); // 'printf' is not inside for because it will also repeat the word 'Enter the text:'
+    
+    // for looping to scan multiple strings
+    for(i=0; i<numberOfWords; i++){
+        scanf("%s", words);
+        current = 0;
+
+        // for looping made for counting all letters in each words
+        for(j=0; words[j] != '\0'; j++){
+            current++;
+        }
+        // if current number is larger than the previous longest word then the longest word will be the current longest word
+        if(current > longestWord){
+            longestWord = current;
+        }
+    }
+
+    // prints the count of the longest word
+    printf("The length of the longest word is: %d", longestWord);
+
+    return 0;
+
+}
