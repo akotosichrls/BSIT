@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+void printName(char name[]){
+    printf("Hello %s!\n", name);
+}
+
+int main(){
+    printName("John");
+    printName("James");
+    printName("Jude");
+
+    return 0;
+
+}
