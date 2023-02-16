@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+double interest(double balance, double rate) {
+  double interest = balance * (rate / 100.0);
+  return interest;
+}
+
+int main() {
+
+  double balance; 
+  double rate; 
+  double earned;
+
+    printf("Balance: ");
+    scanf("%lf", &balance);
+    printf("Interest Rate: ");
+    scanf("%lf", &rate);
+
+    earned = interest(balance, rate);
+    earned *= 12; 
+
+    printf("Interest earned: Php %.2lf\n", earned);
+
+  return 0;
+}
