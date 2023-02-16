@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+float calculateInterest(float balance, float interestRate) {
+   return balance * (interestRate / 100) * 12;
+}
+
+int main() {
+   float balance, interestRate;
+
+    printf("Enter the balance: ");
+    scanf("%f", &balance);
+
+    printf("Enter the interest rate: ");
+    scanf("%f", &interestRate);
+
+    printf("Interest earned: %.2f\n", calculateInterest(balance,interestRate));
+    
+    return 0;
+}
