@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+void printName(char name[], int age){
+    printf("Hello %s! You are %d years old\n", name, age);
+}
+
+int main(){
+    printName("John", 26);
+    printName("James", 30);
+    printName("Jude", 19);
+
+    return 0;
+
+}
