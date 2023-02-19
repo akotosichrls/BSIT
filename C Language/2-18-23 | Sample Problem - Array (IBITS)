@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{   
+    int n, i, num[30]; // initializationi
+
+    // array size?
+    printf("Enter array size: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++)
+    {
+        printf("Element [%d]: ", i);
+        scanf("%d", &num[i]);
+    }
+    
+    printf("Elements in array: ");
+    for(i = 0; i < n; i++)
+    {
+        printf("%d ", num[i]);
+    }
+
+    return 0;
+
+}
