@@ -1,0 +1,16 @@
+WHILE LOOP
+#include <stdio.h>
+
+int main()
+{
+    int i = 1; // initialization
+
+    while(i <= 10) // condition
+    {
+        printf("%d\n", i); // display the number
+        i++; // increment
+    }
+
+    return 0;
+
+}
