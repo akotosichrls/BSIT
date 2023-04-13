@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+
+    int boxingScore[5][2] = {
+        {10, 20},
+        {30, 40},
+        {50, 60},
+        {70, 80},
+        {90, 100}
+    };
+
+    printf("Element in row 3, column 2 is %d", boxingScore[2][1]);
+
+    return 0;
+}
