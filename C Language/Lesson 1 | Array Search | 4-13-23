@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+
+    int oneDimensionalArray[5] = {10, 20, 30, 40, 50};
+    int search = 40;
+
+    for(int i=0; i<5; i++){
+        if(oneDimensionalArray[i] == search)
+        printf("Element found at index %d \n", i);
+    }
+
+    return 0;
+}
