@@ -1,0 +1,29 @@
+//code ni Marc
+
+#include <stdio.h>
+
+int main() {
+int lower = 1;
+int upper = 100;
+int guess = (lower + upper) / 2;
+char input;
+
+printf("Pick a number between 1 and 100 (inclusive) and keep it in your mind.\n");
+
+ while (input != 'C') {
+    printf("Is your number %d? (Enter 'L' if too low, 'H' if too high, or 'C' if correct): ", guess);
+    scanf(" %c", &input);
+    
+    if (input == 'L') {
+        lower = guess + 1;
+    } else if (input == 'H') {
+        upper = guess - 1;
+    }
+    
+    guess = (lower + upper) / 2;
+} 
+
+printf("I guessed your number! It's %d.\n", guess);
+
+return 0;
+}
