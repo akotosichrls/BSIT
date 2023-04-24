@@ -2,3 +2,4 @@
 Welcome!
 
 sana may pera akong matanggap hehe
+just gcash my location sir
