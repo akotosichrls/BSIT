@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+    int score = 42;
+    int *scorePointer = &score;
+
+    printf("%p\n", &score);
+    printf("The value of score is %d and its address is %p.\n", score, scorePointer);
+
+    return 0;
+}
