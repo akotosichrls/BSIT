@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(){
+    int score = 42;
+    printf("%p\n", &score);
+    printf("The value of score is %d and its address is %p.\n", score, &score);
+
+    return 0;
+}
