@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main(){
+    int score = 42;
+    printf("%p\n", &score);
+
+    return 0;
+}
