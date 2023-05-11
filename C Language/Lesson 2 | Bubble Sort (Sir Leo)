@@ -1,0 +1,35 @@
+#include <stdio.h>
+void swap(int *a, int *b) {
+int temp = *a;
+* a = *b;
+* b = temp;
+}
+void bubble_sort(int arr[], int n) {
+int i, j;
+int swapped;
+// Outer loop for n-1 passes
+for (i = 0; i < 6; i++) {
+swapped = 0;
+for (j = 0; j < 6 - i; j++) {
+if (arr[j] > arr[j + 1]) {
+swap(&arr[j], &arr[j + 1]);
+swapped = 1;
+}
+}
+if (swapped == 0) {
+break;
+}
+}
+}
+int main() {
+int arr[] = {64, 34, 25, 12, 22, 11, 90};
+int n = 7;
+int i;
+bubble_sort(arr, n);
+printf("Sorted array is: ");
+for (i = 0; i < n; i++) {
+printf("%d ", arr[i]);
+}
+printf("\n");
+return 0;
+}
