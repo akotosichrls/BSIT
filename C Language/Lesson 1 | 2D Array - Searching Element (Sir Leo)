@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() {
+int search = 97;
+int i, j;
+int found = 0;
+int boxingScores[5][2] = {
+{96, 87},
+{88, 84},
+{92, 90},
+{89, 92},
+{87, 97}
+};
+// Search for the target value in the array
+for (i = 0; i < 5; i++) {
+for (j = 0; j < 2; j++) {
+if (boxingScores[i][j] == search) {
+printf("The value %d was found at row %d, column %d\n",
+search, i, j);
+found = 1;
+}
+}
+}
+// If the target value was not found, display an error message
+if (!found) {
+printf("The value %d was not found in the array\n", search);
+}
+return 0;
+}
