@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){
+    int score = 42;
+    int *scorePointer = &score;
+
+    double GPA = 1.5;
+    double *GPAPointer = &GPA;
+    
+    char letter = 'B';
+    char *letterPointer = &letter;
+
+    printf("%p\n", &score);
+    printf("The value of score is %d and its address is %p.\n", *scorePointer, scorePointer);
+    printf("The value of score is %lf and its address is %p.\n", *GPAPointer, GPAPointer);
+    printf("The value of score is %c and its address is %p.\n", *letterPointer, letterPointer);
+
+    return 0;
+}
