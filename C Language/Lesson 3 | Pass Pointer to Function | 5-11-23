@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void timesTwo(int);
+
+int main(){
+    int x;
+
+    printf("Please enter an integer: ");
+    scanf("%d", &x);
+
+    printf("In main: you entered %d.\n", x);
+
+    timesTwo(x);
+
+    printf("In main: the value of x is %d.\n", x);
+
+    return 0;
+}
+
+void timesTwo(int number){
+    printf("In the function: the number is %d.\n", number);
+    number = number * 2;
+    printf("In the function: the new number is %d.\n", number);
+}
