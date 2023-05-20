@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+void printArray(int *, int);
+void squareArray(int *, int);
+
+int main(){
+    int array[] = {10, 20, 30, 40, 50};
+    int N = 5;
+    printArray(array, N);
+    squareArray(array, N);
+    printArray(array, N);
+    return 0;
+}
+
+void printArray(int * ptr, int size){
+    int i;
+    for(i=0; i<size; i++){
+        printf("%d ", ptr[i]); // *(ptr + i)
+    }
+    printf("\n"); //line spacing
+}
+
+void squareArray(int * ptr, int size){
+    int i;
+    for(i=0; i<size; i++){
+        ptr[i] = ptr[i] * ptr[i];
+    }
+    printf("\n"); //line spacing
+}
