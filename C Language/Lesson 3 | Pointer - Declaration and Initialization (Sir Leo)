@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+int score = 42;
+int * scorePointer = &score;
+double percentage = 78.45;
+double * percentagePointer = &percentage;
+char letter = 'B';
+char * letterPointer = &letter;
+printf("The score is %d and its address is %p.\n", score,
+scorePointer);
+printf("The percentage is %lf and its address is %p.\n", percentage,
+percentagePointer);
+printf("The letter is %c and its address is %p.\n", letter,
+letterPointer);
+return 0;
+}
