@@ -1,0 +1,17 @@
+#include <stdio.h>
+void printArray(int *, int);
+int main(void) {
+int array[] = {10, 20, 30, 40, 50, 60};
+int N = 6;
+printArray(array,6);
+return 0;
+}
+void printArray(int * ptr, int size){
+int i;
+for (i=0; i<size; i++){
+//printf("%d ", *(ptr+i));
+printf("%d ",ptr[i]);
+}
+printf("\n");
+}
+}
