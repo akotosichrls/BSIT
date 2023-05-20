@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+    int array[] = {10, 20, 30};
+
+    printf("The array contains %d, %d, and %d\n", array[0], array[1], array[2]);
+
+    printf("The addresses are %p, %p, and %p\n", &array[0], &array[1], &array[2]);
+
+    return 0;
+}
