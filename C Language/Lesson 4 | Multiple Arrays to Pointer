@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+    int a[3] = {234, 655, 843};
+    int b[2] = {12, 43};
+    int c[4] = {325, 456, 576, 634};
+
+    //pointer
+    int * arrays[3] = {a, b, c};
+
+    printf("%d %d %d\n", a[0], a[1], a[2]);
+
+    return 0;
+}
