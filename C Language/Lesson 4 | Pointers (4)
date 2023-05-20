@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+    int array[] = {10, 20, 30};
+    int *ptr, *ptr2;
+
+    printf("The array contains %d, %d, and %d\n", array[0], array[1], array[2]);
+
+    ptr = array;
+
+    *ptr = 15;
+    *(ptr + 1) = 25;
+    *(ptr + 2) = 35;
+
+    printf("The new array contains %d, %d, and %d\n", array[0], array[1], array[2]);
+
+    return 0;
+}
