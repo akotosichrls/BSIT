@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){
+    int array[] = {10, 20, 30};
+    int *ptr, *ptr2;
+
+    printf("The array contains %d, %d, and %d\n", array[0], array[1], array[2]);
+
+    printf("The addresses are %p, %p, and %p\n", &array[0], &array[1], &array[2]);
+
+    //array is equal to array[0];
+    ptr = array;
+    ptr2 = &array[0];
+
+    printf("%p\n", ptr);
+    printf("%p\n", ptr2);
+
+    return 0;
+}
