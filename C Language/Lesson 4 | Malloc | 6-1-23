@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    
+    int *numPtr;
+
+    numPtr = (int*)malloc(sizeof(int));
+    
+    *numPtr = 42;
+    printf("The value is %d.\n", *numPtr);
+
+    free(numPtr);
+
+    return 0;
+}
