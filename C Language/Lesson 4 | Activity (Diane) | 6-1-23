@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+
+    //Print in reverse order
+    char words [68][40];
+    
+    int i;
+
+    printf("Please enter the paragraph to be reversed: \n");
+    for (i=0; i<68; i++) {
+        scanf("%s", words[i]);
+    }
+
+    printf("Reversed: \n");
+    for (i=67; 0<i; i--) {
+        printf("%s ", words[i]);
+    }
+
+  return 0;
+}
