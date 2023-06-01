@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void){
+    char words[68][40]; // 68 words, 40 characters
+    int i;
+
+    printf("Please enter 68 words to reverse: ");
+    for (i=0; i<67; i++){
+        scanf("%s", words[i]); // input will be stored in words[i]
+    }
+
+    printf("Text in reverse order:\n");
+    for (i=67; i>=0; i--){
+        printf("%s ", words[i]); // prints what is stored in words[i]
+    }
+
+    return 0;
+}
