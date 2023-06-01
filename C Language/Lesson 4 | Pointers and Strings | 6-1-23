@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(){
+
+    char a[5];
+    char b[10];
+    char c[15];
+
+    char *words[3] = {a, b, c};
+
+    printf("Please enter a word with at most 5 letters: ");
+    scanf("%s", a);
+
+    printf("Please enter a word with at most 10 letters: ");
+    scanf("%s", b);
+
+    printf("Please enter a word with at most 15 letters: ");
+    scanf("%s", c);
+
+    printf("You entered: \n");
+    printf("%s %s %s\n", a, b, c);
+
+    return 0;
+}
