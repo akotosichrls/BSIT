@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Student{
+    int studentNumber;
+    char name[50];
+    int age;
+    double grade;
+};
+
+int  main(void){
+    struct Student student[5];
+
+    for (int i=0; i<5; i++){
+        printf("Student's Number: ");
+        scanf("%d", &student[i].studentNumber + 1);
+
+        printf("Student #%d's Name: ", i+1);
+        scanf(" %[^\n]", &student[i].name);
+
+        printf("Student #%d's Age: ", i+1);
+        scanf("%d", &student[i].age);
+
+        printf("Student #%d's Grade: ",i+1);
+        scanf("%lf", &student[i].grade);
+
+        printf("\n");
+    }
+    
+    for (int i = 0; i < 5; i++){
+        printf("Student's Number: %d\n", student[i].studentNumber);
+        printf("Student #%d's Name: %s\n",i , student[i].name);
+        printf("Student #%d's Age: %d\n",i , student[i].age);
+        printf("Student #%d's Grade: %lf\n",i,student[i].grade);
+    }
+    return 0;
+}
