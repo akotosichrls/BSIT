@@ -13,7 +13,7 @@ int  main(void){
 
     for (int i=0; i<5; i++){
         printf("Student's Number: ");
-        scanf("%d", &student[i].studentNumber + 1);
+        scanf("%d", &student[i].studentNumber);
 
         printf("Student #%d's Name: ", i+1);
         scanf(" %[^\n]", &student[i].name);
@@ -28,7 +28,7 @@ int  main(void){
     }
     
     for (int i = 0; i < 5; i++){
-        printf("Student's Number: %d\n", student[i].studentNumber);
+        printf("\nStudent's Number: %d\n", student[i].studentNumber);
         printf("Student #%d's Name: %s\n",i , student[i].name);
         printf("Student #%d's Age: %d\n",i , student[i].age);
         printf("Student #%d's Grade: %lf\n",i,student[i].grade);
