@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Student{ 
+    char name[50];
+    int studentNumber;
+    int age;
+    double grade;
+};
+
+int  main(void){
+    struct Student student[5];
+
+    for (int i=0; i<5; i++){ //input the users details
+        printf("Student's Number: ");
+        scanf("%d", &student[i].studentNumber);
+
+        printf("Student %d's Name: ", i+1);
+        scanf(" %[^\n]", &student[i].name); //use %[^\n] instead of %s
+
+        printf("Student %d's Age: ", i+1);
+        scanf("%d", &student[i].age);
+
+        printf("Student %d's Grade: ",i+1);
+        scanf("%lf", &student[i].grade);
+
+        printf("\n");
+        }
+    
+    for (int i=0; i<5; i++){ //prints the output/students detail
+        printf("\nStudent's Number: %d\n", student[i].studentNumber);
+        printf("Student %d's Name: %s\n", i, student[i].name);
+        printf("Student %d's Age: %d\n", i, student[i].age);
+        printf("Student %d's Grade: %lf\n", i,student[i].grade);
+    }
+
+    int maxAge = student[0].age; //determine the oldest age in the class
+    int oldestStudentIndex = 0;
+
+    for(int i=0; i<5; i++){ //to compare the age
+        if(student[i].age > maxAge){
+            maxAge = student[i].age;
+            oldestStudentIndex = i;
+        }
+    }
+
+    printf("\nOldest Student in the Class: \n"); //output the details
+    printf("Student's Name: %s\n", student[oldestStudentIndex].name);
+    printf("Student's Number: %d\n", student[oldestStudentIndex].studentNumber);
+    printf("Student's Age: %d\n", student[oldestStudentIndex].age);
+    printf("Grade: %.2lf\n\n", student[oldestStudentIndex].grade);
+
+    double sum = 0.0;
+    for(int i=0; i<5; i++){ //to compute the average
+        sum += student[i].grade;
+    }
+
+    double average = sum / 5;
+
+    printf("Average Grade: %.2lf\n", average); //output
+
+    return 0;
+}
