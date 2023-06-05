@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Person{
+    char name[50];
+    int age;
+    char jobDescription[50];
+};
+
+int main(void){
+    struct Person employee[3] = {
+        {"Juan Dela Cruz", 27, "Data Analyst"},
+        {"Jenny Rosario", 28, "Scientist"},
+        {"Cedrick Mangasi", 34, "Progammer"}
+    };
+
+    for(int i=0; i<3; i++){
+        printf("Employee Number: %d\n", i+1);
+        printf("Employee's Name: %s\n", employee[i].name);
+        printf("Employee's Age: %d\n", employee[i].age);
+        printf("Employee's Job Description: %s\n", employee[i].jobDescription);
+        
+        printf("\n");
+    }
+    return 0;
+}
