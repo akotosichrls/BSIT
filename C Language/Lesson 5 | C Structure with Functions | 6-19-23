@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Person {
+    char name[50];
+    int age;
+} person1, person2;
+
+struct Person createPerson(char name[50], int age);
+
+void displayPerson(struct Person p);
+
+int main(){
+    strcpy(person1.name, "Juan Dela Cruz");
+    person1.age = 24;
+
+    person2 = createPerson("Jenny Mercado", 29);
+
+    displayPerson(person1);
+    displayPerson(person2);
+
+    return 0;
+}
+
+struct Person createPerson(char name[50], int age){
+    struct Person p;
+    strcpy(p.name, name);
+    p.age = age;
+
+    return p;
+}
+
+void displayPerson(struct Person p){
+    printf("Name: %s\n", p.name);
+    printf("Age: %d\n", p.age);
+    printf("\n");
+}
