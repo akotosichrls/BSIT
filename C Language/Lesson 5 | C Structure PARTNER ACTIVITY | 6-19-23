@@ -1,0 +1,120 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Student {
+    char name[50];
+    int studentNumber;
+    int age;
+    float grade;
+};
+
+void addStudent(struct Student studentRecord[], int numRecords);
+void displayStudents(struct Student studentRecord[], int numRecords);
+void searchStudent(struct Student studentRecord[], int numRecords);
+void modifyStudent(struct Student studentRecord[], int numRecords);
+
+int main(){
+    int numRecords;
+    
+    printf("Enter the number of records: ");
+    scanf("%d", &numRecords);
+
+    struct Student studentRecord[numRecords];
+
+    addStudent(studentRecord, numRecords);
+    displayStudents(studentRecord, numRecords);
+    searchStudent(studentRecord, numRecords);
+    modifyStudent(studentRecord, numRecords);
+    displayStudents(studentRecord, numRecords);
+
+    return 0;
+}
+
+void addStudent(struct Student studentRecord[], int numRecords){
+    int i;
+
+    for(i=0; i<numRecords; i++){
+        printf("Enter Student %d Details: \n", i+1);
+
+        printf("Name: ");
+        scanf(" %[^\n]", &studentRecord[i].name);
+
+        printf("Student Number: ");
+        scanf("%d", &studentRecord[i].studentNumber);
+
+        printf("Age: ");
+        scanf("%d", &studentRecord[i].age);
+
+        printf("Grade: ");
+        scanf("%f", &studentRecord[i].grade);
+
+        printf("\n");
+    }
+}
+
+void displayStudents(struct Student studentRecord[], int numRecords){
+    int i;
+
+    printf("Student Records:\n");
+
+    for(i=0; i<numRecords; i++){
+        printf("Student %d Details: \n", i+1);
+
+        printf("Name: %s\n", studentRecord[i].name);
+        printf("Student Number: %d\n", studentRecord[i].studentNumber);
+        printf("Age: %d\n", studentRecord[i].age);
+        printf("Grade: %.2f\n", studentRecord[i].grade);
+
+        printf("\n");
+    }
+}
+
+void searchStudent(struct Student studentRecord[], int numRecords){
+    int i;
+    int studentNumber;
+
+    printf("Search Student Number: ");
+    scanf("%d", &studentNumber);
+
+    for(i=0; i<numRecords; i++){
+        if(studentRecord[i].studentNumber == studentNumber){
+        printf("Student Found!\n");
+
+        printf("Name: %s\n", studentRecord[i].name);
+        printf("Student Number: %d\n", studentRecord[i].studentNumber);
+        printf("Age: %d\n", studentRecord[i].age);
+        printf("Grade: %.2f\n", studentRecord[i].grade);
+
+        printf("\n");
+        return;
+        }
+    }
+}
+
+void modifyStudent(struct Student studentRecord[], int numRecords){
+    int i;
+    int studentNumber;
+
+    printf("Enter student number to modify: ");
+    scanf("%d", &studentNumber);
+
+    for(i=0; i<numRecords; i++){
+        if(studentRecord[i].studentNumber == studentNumber){
+        printf("Enter New Student Details: \n");
+
+        printf("New Name: ");
+        scanf(" %[^\n]", &studentRecord[i].name);
+
+        printf("New Student Number: ");
+        scanf("%d", &studentRecord[i].studentNumber);
+
+        printf("New Age: ");
+        scanf("%d", &studentRecord[i].age);
+
+        printf("New Grade: ");
+        scanf("%f", &studentRecord[i].grade);
+
+        printf("\n");
+        }
+    }
+}
