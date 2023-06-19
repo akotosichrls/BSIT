@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Person {
+    char name[50];
+    int age;
+} person1, *personPtr;
+
+int main(){
+    personPtr = &person1;
+
+    strcpy(person1.name, "Juan Dela Cruz");
+    person1.age = 24;
+
+    printf("Name: %s\n", personPtr->name);
+    printf("Age: %d\n", personPtr->age);
+    printf("\n");
+}
