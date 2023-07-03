@@ -1,0 +1,68 @@
+#include <stdio.h>
+
+void swap(int *a, int *b) 
+{
+    int temp = *a;
+        * a = *b;
+        * b = temp;
+}
+
+void bubble_sort(int arr[], int n) {
+    int i, j;
+    int swapped;
+
+    for (i = 0; i < 6; i++) {
+        swapped = 0;
+        for (j = 0; j < 5 - i; j++) 
+        {
+            if (arr[j] > arr[j + 1]) 
+            {
+                swap(&arr[j], &arr[j + 1]);
+             swapped = 1;
+            }
+        }
+        if (swapped == 0) {
+            break;
+        }
+    }
+}
+
+int main (){
+    
+    int maxNum;
+        printf("Enter maximum number:");
+        scanf("%d",&maxNum);
+
+    int input[maxNum];
+            printf("Enter numbers:");   
+            printf("\n"); 
+
+            for(int i = 0; i<maxNum; i++)
+            {     
+                scanf("%d", &input[i]);
+            }   
+
+
+    bubble_sort(input, maxNum);
+
+    FILE * fptr;
+    fptr=fopen("C:/Users/sarah/Desktop/NewFile.txt","w");
+
+    if(fptr != NULL)
+    {
+       for(int i = 0; i < maxNum; i++) 
+        {
+            fprintf(fptr, "%d\n", input[i]);    
+        }
+        fclose(fptr);
+        printf("Successfully sorted.\n");
+    }
+    else
+    {
+         printf("File Unsuccessful.");  
+    }
+
+    fclose(fptr);
+
+    return 0;
+}
