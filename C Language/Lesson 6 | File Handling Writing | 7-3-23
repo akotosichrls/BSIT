@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    FILE *fptr;
+    char name[50];
+    int age;
+    fptr = fopen("C:/Users/sarah/Desktop/test.txt", "w");
+
+    if (fptr != NULL) {
+        printf("Enter your name: ");
+        fgets(name,50,stdin);
+        fprintf(fptr, "Name: %s", name);
+
+        printf("Enter your age: ");
+        scanf("%d",&age);
+        fprintf(fptr, "Age: %d", age);
+    }
+    fclose(fptr);
+    return 0;
+}
