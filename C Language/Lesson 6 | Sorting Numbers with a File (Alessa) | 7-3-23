@@ -1,0 +1,75 @@
+#include <stdio.h>
+void swap(int *a, int *b) {
+    int temp = *a;
+    * a = *b;
+    * b = temp;
+}
+
+void bubble_sort(int numbers[], int max) {
+    int i, j;
+    int swapped;
+
+    for (i = 0; i < max; i++) {
+
+        swapped = 0;
+
+        for(j = 0; j < max - i; j++){
+            if(numbers[j] > numbers[j + 1]){
+                swap(&numbers[j], &numbers[j + 1]);
+                swapped = 1;
+            }
+        }
+        if (swapped == 0) {
+            break;
+        }
+    }
+}
+
+int main(){
+    int max;
+    int i;
+    
+    printf("Enter the maximum numbers of digits: \n"); //getting the maximum digits
+    scanf("%d", &max);
+
+    int numbers[max];
+    for(i = 0; i < max; i++) {
+        printf("Enter the digit: \n"); //input digits
+        scanf("%d", &numbers[i]);
+    }
+
+    bubble_sort(numbers, max); //bubble sort function 
+
+    printf("\n");
+    printf("Numbers sorted successfully!\n");
+
+    printf("\n Reading and Printing from a file: \n");
+
+    FILE *fptr; //file handling function
+
+    fptr = fopen("C:/Users/acer/OneDrive/Documents/Sorting Numbers.txt","w"); //to write in the file
+
+        if(fptr!=NULL){
+            for(i=0; i<max; i++){
+                fprintf(fptr, "%d\n", numbers[i]);
+            }
+        }else{
+            printf("Not found.\n");
+        }
+        fclose(fptr);
+
+        fptr = fopen("C:/Users/acer/OneDrive/Documents/Sorting Numbers.txt","r"); //to read the file
+
+        char content[1000];
+
+        if(fptr!=NULL){
+            while(fgets(content,1000,fptr)){
+            printf("%s",content);
+            }
+        }else{
+            printf("File read unsuccessfully. \n");
+        }
+    fclose(fptr);
+
+    return 0;
+}
