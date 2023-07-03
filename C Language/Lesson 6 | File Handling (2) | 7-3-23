@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+    FILE *fptr;
+
+    fptr = fopen("C:/Users/sarah/Desktop/test.txt", "r");
+
+    char content[1000];
+    
+    if(fptr!=NULL){
+        while(fgets(content, sizeof(content), fptr)){
+            printf("%s", content);
+        }
+    }else{
+        printf("File read unsuccessfully.\n");
+    }
+    fclose(fptr);
+    return 0;
+}
+
+//dito ioopen ng code yung text file and ipprint niya yung nakalagay sa text file sa code, pagwalang nakalagay sa text file na words, else condition ang mapprint
