@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+void bubbleSort(int numbers[], int n){
+    int i, j;
+    for(i=0; i<n-1; i++){
+        for(j=0; j<n-i; j++){
+            if(numbers[j] > numbers[j+1]){
+                int temp = numbers[j];
+                numbers[j] = numbers[j+1];
+                numbers[j+1] = temp;
+            }
+        }
+    }
+}
+
+void sortAndStoreNumbers(){
+    int totalNumbers = 1;
+
+    printf("Enter the maximum number of digits: ");
+    scanf("%d", &totalNumbers);
+
+    int numbers[totalNumbers];
+    for(int i=0; i<totalNumbers; i++){
+        printf("Enter digits: ");
+        scanf("%d", &numbers[i]);
+    }
+
+    bubbleSort(numbers, totalNumbers);
+
+    FILE *fptr = fopen("C:/Users/sarah/Desktop/sortingNumbers.txt", "w");
+    if(fptr!=NULL){
+        for(int i=0; i<totalNumbers; i++){
+            fprintf(fptr, "%d\n", numbers[i]);
+        }
+        fclose(fptr);
+        printf("Numbers sorted successfully!\n");
+    } else {
+        printf("Error found!\n");
+    }
+}
+
+void readAndPrintNumbers(){
+    FILE *fptr = fopen("C:/Users/sarah/Desktop/sortingNumbers.txt", "r");
+
+    if(fptr!=NULL){
+        printf("Reading and Printing from a file: \n");
+        printf("Ascending order: \n");
+        int number;
+        while(fscanf(fptr, "%d", &number) != EOF){
+            printf("%d\n", number);
+        }
+        fclose(fptr);
+    } else {
+        printf("Error found!\n");
+    }
+}
+
+int main(){
+    sortAndStoreNumbers();
+
+    readAndPrintNumbers();
+
+    return 0;
+}
