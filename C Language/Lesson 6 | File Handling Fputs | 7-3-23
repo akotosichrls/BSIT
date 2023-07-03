@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    FILE *fptr;
+
+    fptr = fopen("C:/Users/sarah/Desktop/newTest.txt", "w");
+
+    if (fptr != NULL) {
+        fputs("I am becoming better in Programming.\n", fptr);
+        fputs("Learning C Programming is fun!\n", fptr);
+    }else{
+        printf("File open unsuccessfully.\n");
+    }
+    fclose(fptr);
+    return 0;
+}
+
+//gagawa ng new text file and ilalagay ito ni code sa text file pagnaexecute
