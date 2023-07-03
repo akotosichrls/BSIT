@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    FILE *fptr;
+
+    fptr = fopen("C:/Users/sarah/Desktop/newTest.txt", "w");
+
+    if (fptr != NULL) {
+        fputs("I am becoming better in Programming.\n", fptr);
+        fputs("Learning C Programming is fun!\n", fptr);
+        printf("File written successfully.\n");
+    } else {
+        printf("File open unsuccessfully.\n");
+    }
+
+    fclose(fptr);
+
+    fptr = fopen("C:/Users/sarah/Desktop/newTest.txt", "r");
+
+    if (fptr != NULL) {
+        char content[1000];
+
+        while (fgets(content, sizeof(content), fptr)) {
+            printf("%s", content);
+        }
+
+        fclose(fptr);
+    } else {
+        printf("File open unsuccessfully.\n");
+    }
+
+    return 0;
+}
