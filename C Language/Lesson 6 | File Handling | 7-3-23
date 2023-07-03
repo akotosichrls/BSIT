@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+    FILE *fptr;
+
+    fptr = fopen("C:/Users/sarah/Desktop/test.txt", "r");
+    
+    if(fptr!=NULL){
+        printf("File open successfully.\n");
+    } else {
+        printf("File open unsuccessfully.\n");
+    }
+
+    fclose(fptr);
+    return 0;
+}
+
+
+//pagmay test.txt sa folder first condition maeexecute
+//pagwalang test.txt sa folder first condition ay false at else condition naman ang mageexecute
