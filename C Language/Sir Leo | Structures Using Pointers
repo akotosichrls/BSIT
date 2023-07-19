@@ -1,0 +1,143 @@
+Structure Pointers: Using pointers to access and manipulate structures.
+
+
+#include <stdio.h>
+#include <string.h>
+
+struct Person{
+    char name[50];
+    int age;
+};
+
+int main() {
+    struct Person person1;
+    
+    struct Person *personPtr;
+    
+    strcpy(person1.name,"John Paul");
+    person1.age = 24;
+    
+    personPtr = &person1;
+    
+    (printf("Name: %s\n",personPtr -> name));
+    (printf("Age: %d\n",personPtr -> age));
+    
+    strcpy(personPtr->name,"James");
+    personPtr->age = 27;
+    
+    (printf("Updated Name: %s\n",personPtr -> name));
+    (printf("Updated Age: %d\n",personPtr -> age));
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+Structure as Function Arguments: Passing structures to functions.
+
+
+#include <stdio.h>
+#include <string.h>
+
+struct Person{
+    char name[50];
+    int age;
+};
+
+void displayPerson(struct Person p);
+
+int main() {
+    struct Person person1;
+    strcpy(person1.name,"John");
+    person1.age = 30;
+    
+    displayPerson(person1);
+    
+    return 0;
+}
+
+void displayPerson(struct Person p){
+    printf("Name: %s\n",p.name);
+    printf("Age: %d\n",p.age);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Returning Structures from Functions: Returning structures from functions
+
+#include <stdio.h>
+#include <string.h>
+
+struct Person{
+    char name[50];
+    int age;
+};
+
+struct Person createPerson(char name[],int age);
+
+void displayPerson(struct Person p);
+
+int main() {
+    struct Person person1;
+    
+    person1 = createPerson("John", 30);
+    displayPerson(person1);
+    
+    return 0;
+}
+
+struct Person createPerson(char name[],int age){
+    struct Person p;
+
+    strcpy(p.name,name);
+    p.age = age;
+    
+    return p;
+};
+
+void displayPerson(struct Person p){
+    printf("Name: %s\n",p.name);
+    printf("Age: %d\n",p.age);
+}
+
+
+
+
+
+
+
+
+Activity
+
+
+Build a system to manage student records using a structure to store information such as name, roll number, and marks.
+
+Add Function that will get student records from the user.
+
+Add Function that will modify student record.
+
+
+
