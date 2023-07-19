@@ -1,0 +1,178 @@
+Opening a File
+
+#include <stdio.h>
+
+int main() {
+    FILE *fptr;
+
+    fptr = fopen("/Users/marielleovioleta/Desktop/Second Semester AY 2022-2023/Computer Programming 2/CProgramming/CFile/C File Handling/C File Handling/Output.txt", "r");
+
+    if (fptr != NULL) {
+        printf("File Open Successfully\n");
+    }
+    else {
+        printf("File Open Unsuccessfully\n");
+    }
+    return 0;
+}
+
+Reading from a file
+
+#include <stdio.h>
+
+int main() {
+    
+    FILE *fptr = fopen("/Users/marielleovioleta/Desktop/Second Semester AY 2022-2023/Computer Programming 2/CProgramming/CFile/C File Handling/C File Handling/Output.txt", "r");
+    char content[1000];
+
+    
+    if (fptr != NULL) {
+        
+        if (fgets(content, 1000, fptr) != NULL) {
+            printf("%s", content);
+        } else {
+            printf("Failed to read from file or file is empty!\n");
+        }
+        fclose(fptr);
+    } else {
+        printf("File open unsuccessfully!\n");
+    }
+
+    return 0;
+}
+
+To read texts from all the lines:
+
+#include <stdio.h>
+
+int main() {
+    FILE *fptr;
+
+    fptr = fopen("/Users/marielleovioleta/Desktop/Second Semester AY 2022-2023/Computer Programming 2/CProgramming/CFile/C File Handling/C File Handling/Output.txt", "r");
+    char content[1000];
+
+    if (fptr != NULL) {
+        while (fgets(content, 1000, fptr)) {
+            printf("%s", content);
+        }
+    }
+    else {
+        printf("File Open Unsuccessful");
+    }
+    return 0;
+}
+
+
+Closing a File
+
+fclose(fptr);
+
+
+Writing to a file
+
+#include <stdio.h>
+
+int main(){
+    FILE *fptr;
+    
+    fptr = fopen("/Users/marielleovioleta/Desktop/Second Semester AY 2022-2023/Computer Programming 2/CProgramming/CFile/C File Handling/C File Handling/newFile2.txt","w");
+    
+    
+    if(fptr != NULL){
+        fputs("I am becoming better in Programming!\n",fptr);
+        fputs("Learning C Programming is Fun!\n",fptr);
+        printf("File Written Successfully!\n");
+        } else{
+        printf("Failed to open file for writing!\n");
+    }
+    fclose(fptr);
+    
+    fptr = fopen("/Users/marielleovioleta/Desktop/Second Semester AY 2022-2023/Computer Programming 2/CProgramming/CFile/C File Handling/C File Handling/newFile2.txt","r");
+    
+    char content[1000];
+    
+    if(fptr != NULL){
+        while(fgets(content, 1000, fptr)){
+            printf("%s",content);
+        }
+        printf("\n");
+    }else{
+        printf("Failed to open file for reading!\n");
+    }
+    fclose(fptr);
+    
+    return 0;
+}
+
+
+Creation of the User Input Program
+
+#include <stdio.h>
+
+int main() {
+   FILE *fptr;
+    char name[100];
+    int age;
+    
+    fptr = fopen("/Users/marielleovioleta/Desktop/Second Semester AY 2022-2023/Computer Programming 2/CProgramming/CFile/C File Handling/C File Handling/userInput.txt","w");
+    
+    if(fptr!=NULL){
+        
+        printf("Enter your name: ");
+        fgets(name, 100, stdin);
+        fprintf(fptr,"Name: %s",name);
+        
+        printf("Enter your age: ");
+        scanf("%d",&age);
+        fprintf(fptr,"Age: %d\n",age);
+        
+    }else{
+        printf("File Open Unsuccessfully!\n");
+    }
+    fclose(fptr);    
+    return 0;
+}
+
+
+Creation of the Data Reading Program
+
+#include <stdio.h>
+
+int main(){
+    FILE *fptr;
+    char name[100];
+    int age;
+    
+    fptr = fopen("/Users/marielleovioleta/Desktop/Second Semester AY 2022-2023/Computer Programming 2/CProgramming/CFile/C File Handling/C File Handling/userInput.txt","w");
+    
+    if(fptr!=NULL){
+        
+        printf("Enter your name: ");
+        fgets(name, 100, stdin);
+        fprintf(fptr,"Name: %s",name);
+        
+        printf("Enter your age: ");
+        scanf("%d",&age);
+        fprintf(fptr,"Age: %d\n",age);
+        
+    }else{
+        printf("File Open Unsuccessfully!\n");
+    }
+    fclose(fptr);
+    
+    fptr = fopen("/Users/marielleovioleta/Desktop/Second Semester AY 2022-2023/Computer Programming 2/CProgramming/CFile/C File Handling/C File Handling/userInput.txt","r");
+    
+    char content[1000];
+    
+    if(fptr != NULL){
+        while(fgets(content, 1000, fptr)){
+            printf("%s",content);
+        }
+        printf("\n");
+    }else{
+        printf("File open unsuccessfully!\n");
+    }
+    fclose(fptr);
+    
+    return 0;
+}
