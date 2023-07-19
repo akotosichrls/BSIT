@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int* numPtr; // Pointer to hold the allocated memory
+
+    numPtr = (int*)malloc(sizeof(int)); // Allocating memory for a single integer (casting to the correct data type)
+
+    if (numPtr == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
+
+    *numPtr = 42; // Storing a value in the allocated memory
+
+    printf("The value is: %d\n", *numPtr);
+
+    free(numPtr); // Don't forget to free the allocated memory
+
+    return 0;
+}
+
